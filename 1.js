@@ -46,4 +46,20 @@ countWords(paragraph,'love','you')
         const clean = text.replace(/[%$@,&#;!]/g, ``)
         return clean
     };
-   console.log( cleanText(sentence))
+    newSentence = cleanText(sentence)
+   console.log(newSentence)
+
+   //1.c
+
+   const countwords = (text) =>{
+       //converting in to array
+    let array = text.split(" ")
+    console.log(array)
+    let count =0
+    for(let i=0;i<array.length;i++){
+        //if the word length is greater than 1 then count increases
+        array[i].length>1? count++ : count
+    }
+    return count
+   }
+    console.log(countwords(newSentence))
