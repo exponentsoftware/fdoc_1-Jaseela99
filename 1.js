@@ -63,3 +63,17 @@ countWords(paragraph,'love','you')
     return count
    }
     console.log(countwords(newSentence))
+
+    //1.d
+    
+    const newText = sentence.replace(/[%$@,&#;!.?]/g, "")
+    const varietyOfWords = (text) =>{
+        
+        let array = text.split(" ")
+        //set object allows u to store unique value of any datatype
+        let set = new Set(array)
+        console.log(set)
+        //returns number of values in set object
+        console.log(set.size)
+       }
+      varietyOfWords(newText)
