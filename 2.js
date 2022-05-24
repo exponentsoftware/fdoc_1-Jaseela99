@@ -5,18 +5,21 @@ for (let string = "#"; string.length < 8; string += "#") {
 }
 
 
-//2.b
+//2.b 
 
 const sevenRandomNumbers=()=>{
     let array= []
     //for loop to generate 7 random numbers
-    for (let i=0;i<8;i++){
+    for (let i=0;i<7;i++){
         //math.floor floors to the nearest integer
         //math.random generates a random number between 0 and 1
-        const randoms=() => Math.floor(Math.random()*10)
-        let num =randoms()
+        let num = Math.floor(Math.random()*10)
         console.log(num)
-        array.includes(num)?randoms():array.push(num)
+        //if the num is alredy in the array then it will not be added then index will be reduced and loop will be continued
+        if(array.includes(num)){
+            i--
+         continue}
+             else{array.push(num)}
 
     }
     return array
